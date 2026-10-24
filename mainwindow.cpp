@@ -1,31 +1,45 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QWidget>
-#include <iostream>
-/// @brief that function do start 
-///@param parent that 
+#include <QWidget>  
+#include <QVBoxLayout>
+#include "carPriceOnYears.cpp"
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 }
-/// @brief that delete a window
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
-    //set argc
-///
-int MainWindow::on_priceButton_clicked()
+void MainWindow::on_showPrice_clicked()
 {
-    int argc  = 0;
-    //set QApp
-    QApplication app( ,NULL);
-    //set widget
-    QWidget A;
-    A.show();
-    //add
-    return app.exec();
+    //set window
+    QWidget *subWnd = new QWidget(this, Qt::Window); 
+    //set layout
+    QVBoxLayout *l = new QVBoxLayout(subWnd);
+    //set  car
+    Car car("",size_t(ui->price->text().toInt()));
+    //set wnd settings
+    subWnd->setWindowTitle("results");
+    subWnd->setFixedSize(400,600);
+    subWnd->setStyleSheet(
+        "QWidget{background-color:black;}"
+        "QLabel{color:white;}"
+    );
+    //
+    QString Text;
+    //
+    for (size_t i = 0; i < ui->numOfYears->text().toInt(); i++)
+    {
+        QLabel *label= new QLabel(((i==0)?QString("Car On not Used"):QString("Price After") +QString::number(i)+"years:")+QString::number((i==0)?car.getNewPrice() :car.getPriceonUsed(i-1)));
+        l->addWidget(label);
+    }
+    qDebug()<<Text;
+    //show it
+    subWnd->show();
 }
