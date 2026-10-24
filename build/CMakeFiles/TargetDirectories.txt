@@ -1,9 +1,0 @@
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/priceCarOnYear.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/edit_cache.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/rebuild_cache.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/list_install_components.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/install.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/install/local.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/install/strip.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/priceCarOnYear_autogen_timestamp_deps.dir
-/home/sjm-gamer/cpp/priceCarOnYear/build/CMakeFiles/priceCarOnYear_autogen.dir
