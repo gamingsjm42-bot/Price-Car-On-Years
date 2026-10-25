@@ -11,3 +11,5 @@
 <h4>cd build</h4>
 <h4>cmake ..</h4>
 <h4>make</h4>
+<h1>version:</h1>
+<h4>1.0.1</h4>
