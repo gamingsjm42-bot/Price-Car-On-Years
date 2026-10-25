@@ -15,8 +15,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-private slots:
-    int on_priceButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+private slots:
+    void on_showPrice_clicked();
 };

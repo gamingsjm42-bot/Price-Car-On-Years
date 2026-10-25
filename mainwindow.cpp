@@ -30,16 +30,13 @@ void MainWindow::on_showPrice_clicked()
     subWnd->setStyleSheet(
         "QWidget{background-color:black;}"
         "QLabel{color:white;}"
-    );
-    //
-    QString Text;
+    );  
     //
     for (size_t i = 0; i < ui->numOfYears->text().toInt(); i++)
     {
-        QLabel *label= new QLabel(((i==0)?QString("Car On not Used"):QString("Price After") +QString::number(i)+"years:")+QString::number((i==0)?car.getNewPrice() :car.getPriceonUsed(i-1)));
+        QLabel *label= new QLabel(((i==0)?QString("Car On not Used"):QString("Price After") +QString::number(i)+"years:")+QString::number((i==0)?car.getNewPrice() :car.getPriceonUsed(i-1))+ui->unit->text());
         l->addWidget(label);
-    }
-    qDebug()<<Text;
+    } 
     //show it
     subWnd->show();
 }
